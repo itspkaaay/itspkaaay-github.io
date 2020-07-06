@@ -107,6 +107,13 @@ function init()
 
 
             var head= snake.cells[0];
+            var remaining_body= this.cells.slice(1,);
+            if(remaining_body.some(function(o){
+                if(head.x==o.x && head.y==o.y){
+                    console.log("snake bit itself");
+                    gameover=true;
+                }
+            }));
             if(head.x===fruit.x && head.y===fruit.y)
             {
                 console.log("head:",head,",fruit:",fruit);
