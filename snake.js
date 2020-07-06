@@ -1,12 +1,12 @@
 document.body.style.zoom="75%";
 function init()
 {
-    food_img_path="/Users/pk/Desktop/Application of Data structures/Snakes-Game/assets/apple.png";
+    food_img_path="./assets/apple.png";
     food_img = new Image();
     food_img.src=food_img_path;
 
     trophy= new Image();
-    trophy.src="/Users/pk/Desktop/Application of Data structures/Snakes-Game/assets/trophy.png";
+    trophy.src="./assets/trophy.png";
     fruitctr=1;
     gameover= false;
     score=5;
