@@ -140,12 +140,14 @@ function makefruit(){
         y: fruit_y,
     };
 
-    while(snake.cells.includes(fruit))
-    {   
-        console.log("calculating correct square");
-        fruit.x= Math.floor((Math.random()*x_max)+1);
-        fruit.y= Math.floor((Math.random()*Math.random()*y_max));
-    }
+    if(snake.cells.some(function(o){
+        if (o.x === fruit.x && o.y=== fruit.y)
+        {
+            console.log("food on snake");
+            makefruit();
+        }
+
+    }));
     pen.fillStyle="red";
 
 
